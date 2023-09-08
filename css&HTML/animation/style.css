@@ -1,0 +1,83 @@
+/* Two-dimensional transforms
+In this section, we’ll go through 2D transforms with the following transform functions:
+--> rotate, scale, skew, and translate. */
+
+.transform-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.boi {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    margin: 32px;
+}
+
+.rotate {
+    transform: rotate(45deg); /*  turn, rad, deg */
+}
+
+.scale {
+    transform: scale(2,3);    /* scaleX scaleY turn, rad, deg */
+}
+
+.skew {
+    transform: skew();  /* skewX skewY  turn, rad, deg */
+}
+
+.three-d {
+    transform: perspective();
+}
+
+.transition {
+    /* ... other CSS properties ... */
+    transition-property: background-color transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.25s;
+  }
+
+.transition:hover {
+    background-color: blueviolet;
+    transform: rotate(55deg);
+}
+
+.animation-div {
+    /* ... other CSS properties ... */
+  animation-duration: 2s;
+  animation-name: change-color;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: 2px solid blueviolet;
+}
+
+@keyframes change-color {
+    from {
+      background-color: aliceblue;
+    }
+  
+    to {
+      background-color: gold;
+    }
+  }
+
+.photo-container > img {
+    height: 200px;
+    width: 300px;
+}
+
+.photo-container {
+    background-size: cover;
+    object-fit: fill;
+}
